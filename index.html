@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atelier Silcortinas</title>
+
+  <!-- Estilos e Fontes -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/page-flip/src/Style/stPageFlip.css">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand fw-bolt" href="#">Atelier Silcortinas</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">Sobre</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Serviços</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+        </ul>
+      </div>
+
+      <a class="btn btn-custom"
+        href="https://wa.me/5521989336443?text=Olá!%20Gostaria%20de%20agendar%20uma%20visita."
+        target="_blank">
+        Agendar Visita
+      </a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-bg next"></div>
+    <div class="hero-content">
+      <h1>Sua casa com estilo</h1>
+      <p>As Melhores Cortinas e Persianas Sob Medida do Rio de Janeiro</p>
+      <a href="#" class="btn btn-custom">Ver Portfólio</a>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section id="about" class="container text-center">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <h2><b>Sobre Mim</b></h2>
+        <p>
+          A <b><a href="https://instagram.com/ateliersilcortinas" target="_blank" id="InstaText">Silcortinas</a></b>
+          tem mais de 20 anos de experiência transformando ambientes com cortinas sob medida que unem elegância,
+          funcionalidade e qualidade. Nosso compromisso é oferecer soluções personalizadas, sempre com materiais
+          de alta durabilidade e acabamento impecável.
+          <br><br>
+          Mais do que cortinas, entregamos conforto, estilo e sofisticação, criando peças que valorizam cada
+          espaço e refletem a personalidade de nossos clientes.
+        </p>
+        <a class="btn btn-custom" data-bs-toggle="modal" data-bs-target="#aboutModal">Saiba Mais</a>
+      </div>
+
+      <div class="col-md-6">
+        <img src="imagem1.jpg" alt="Sobre Mim" class="img-fluid rounded" style="max-width: 500px;">
+      </div>
+    </div>
+  </section>
+
+  <!-- CATÁLOGO -->
+  <div class="wrap">
+    <h1>Cortinas mais Pedidas</h1>
+    <p>Navegue como um Mostruário físico: clique ou arraste a borda da página</p>
+
+    <div class="book-shell">
+      <div id="book" class="flip-book">
+        <!-- CAPA -->
+        <div class="page" data-density="hard">
+          <div class="page-content">
+            <span class="chip">Coleções de Cortinas</span>
+            <h2>Bem-vindo ao Mostruário</h2>
+            <p>Descubra nossos tipos de tecidos e acabamentos</p>
+            <div class="btns">
+              <button class="btn primary" onclick="pf.flipNext()">Ver Catálogo</button>
+              <button class="btn" onclick="pf.turnToPage(3)">Cortinas Teatros</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- PÁGINA -->
+        <div class="page">
+          <div class="page-content">
+            <img src="imagem1.jpg" alt="">
+            <p>Ideal para quartos</p>
+            <span class="chip">Trilhos suíços</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL -->
+  <div class="modal fade" id="aboutModal" tabindex="-1" aria-labelledby="aboutModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title fw-bold" id="aboutModalLabel">Sobre Mim</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+        </div>
+
+        <div class="modal-body">
+          <p>
+            Olá, meu nome é Silviana e sou responsável pela confecção de todas as cortinas.
+            Trabalho ao lado do meu marido, Deusmar, e juntos estamos nesse ramo há mais de vinte anos.
+            Buscamos sempre aprimorar nosso trabalho, com dedicação e cuidado, para oferecer qualidade, elegância
+            e perfeição em cada projeto.
+          </p>
+          <p>Nosso compromisso é transformar sua casa em um espaço que una conforto, harmonia e beleza.</p>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-custom" data-bs-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTATO -->
+  <div id="contato" class="contato-section">
+    <div class="container text-center">
+      <div class="icon">
+        <img src="maquina-costura.png" alt="Máquina de Costura" class="icone-maquina">
+      </div>
+
+      <hr class="linha-agulha">
+
+      <h2 class="titulo-logo">
+        AtelierSilcortinas <span class="scissor-icon">✂</span>
+      </h2>
+
+      <p class="subtitulo">atelier & service</p>
+
+      <p class="lead mt-4">
+        Ficaremos felizes em ajudar a transformar seu lar com cortinas e persianas sob medida.
+        Trabalhamos sempre para oferecer <b>conforto, beleza e qualidade</b> em cada projeto.
+      </p>
+
+      <ul class="list-unstyled mt-4">
+        <li><b>Telefone:</b> (21) 98933-6443</li>
+        <li><b>Instagram:</b>
+          <a href="https://instagram.com/ateliersilcortinas" target="_blank" id="InstaText">@Silcortinas</a>
+        </li>
+        <li><b>Locais de Atendimento:</b> Rio de Janeiro - RJ</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- RODAPÉ -->
+  <div class="copyright">
+    <footer class="text-center text-white">
+      <div class="container pt-4">
+        <section class="mb-4">
+          <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+        </section>
+      </div>
+
+      <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2025 Copyright:
+        <a class="text-dark" href="#">Atelier Sil Cortinas | Dev. Cristofer</a>
+      </div>
+    </footer>
+  </div>
+
+  <!-- 🔹 BOTÃO FLUTUANTE -->
+  <a href="https://wa.me/5521989336443?text=Olá!%20Gostaria%20de%20agendar%20uma%20visita."
+     target="_blank" class="btn-agendar-flutuante">
+    <i class="fa-brands fa-whatsapp me-2"></i> Agendar Visita
+  </a>
+
+  <!-- SCRIPTS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/page-flip/dist/js/page-flip.browser.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
